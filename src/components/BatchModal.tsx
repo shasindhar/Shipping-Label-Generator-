@@ -17,12 +17,12 @@ export const BatchModal: React.FC<BatchModalProps> = ({
   const [recipients, setRecipients] = useState<BatchRecipientItem[]>([
     {
       id: 'batch-1',
-      name: 'SREEBHARANIDHARAN RAMESH',
-      address1: '#58, B Ramachandra Adithanar Rd',
-      city: 'Chennai',
-      state: 'Tamil Nadu',
-      zip: '600020',
-      phone: '9498091513',
+      name: 'JOHN DOE',
+      address1: '100 Logistics Way, Suite 400',
+      city: 'San Francisco',
+      state: 'CA',
+      zip: '94107',
+      phone: '+1 (555) 123-4567',
       trackingNumber: 'TRK-LUM-43934-EXPRESS',
       weight: '1.2 KG',
     },

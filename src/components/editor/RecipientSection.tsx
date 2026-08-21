@@ -32,7 +32,7 @@ const RecipientSectionComponent: React.FC<RecipientSectionProps> = ({ label, onC
               type="text"
               value={label.recipient.name}
               onChange={(e) => handleRecipientChange('name', e.target.value)}
-              placeholder="e.g. SREEBHARANIDHARAN RAMESH"
+              placeholder="e.g. JOHN DOE"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-bold uppercase text-sm"
             />
           </div>
@@ -58,7 +58,7 @@ const RecipientSectionComponent: React.FC<RecipientSectionProps> = ({ label, onC
               type="text"
               value={label.recipient.address1}
               onChange={(e) => handleRecipientChange('address1', e.target.value)}
-              placeholder="e.g. #58, B Ramachandra Adithanar Rd"
+              placeholder="e.g. 123 Main Street"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
@@ -84,7 +84,7 @@ const RecipientSectionComponent: React.FC<RecipientSectionProps> = ({ label, onC
               type="text"
               value={label.recipient.city}
               onChange={(e) => handleRecipientChange('city', e.target.value)}
-              placeholder="Chennai"
+              placeholder="New York"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-semibold"
             />
           </div>
@@ -97,7 +97,7 @@ const RecipientSectionComponent: React.FC<RecipientSectionProps> = ({ label, onC
               type="text"
               value={label.recipient.state}
               onChange={(e) => handleRecipientChange('state', e.target.value)}
-              placeholder="Tamil Nadu"
+              placeholder="NY"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-semibold"
             />
           </div>
@@ -110,7 +110,7 @@ const RecipientSectionComponent: React.FC<RecipientSectionProps> = ({ label, onC
               type="text"
               value={label.recipient.zip}
               onChange={(e) => handleRecipientChange('zip', e.target.value)}
-              placeholder="600020"
+              placeholder="10001"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-mono font-bold"
             />
           </div>
@@ -136,7 +136,7 @@ const RecipientSectionComponent: React.FC<RecipientSectionProps> = ({ label, onC
               type="text"
               value={label.recipient.phone}
               onChange={(e) => handleRecipientChange('phone', e.target.value)}
-              placeholder="9498091513"
+              placeholder="+1 (555) 019-2834"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-mono font-bold"
             />
           </div>

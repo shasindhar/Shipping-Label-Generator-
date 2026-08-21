@@ -2,7 +2,7 @@ import { LabelData } from '../types';
 
 export const DEFAULT_LABEL_DATA: LabelData = {
   id: 'default-label-01',
-  name: 'Nomad Express Chennai Shipment',
+  name: 'Nomad Express Priority Shipment',
   updatedAt: new Date().toISOString(),
   company: {
     name: 'NOMAD LOGISTICS',
@@ -26,15 +26,15 @@ export const DEFAULT_LABEL_DATA: LabelData = {
     email: 'dispatch@nomadlogistics.com',
   },
   recipient: {
-    name: 'SREEBHARANIDHARAN RAMESH',
+    name: 'JOHN DOE',
     company: '',
-    address1: '#58, B Ramachandra Adithanar Rd',
+    address1: '123 Delivery Avenue, Suite 100',
     address2: '',
-    city: 'Chennai',
-    state: 'Tamil Nadu',
-    zip: '600020',
-    country: 'India',
-    phone: '9498091513',
+    city: 'New York',
+    state: 'NY',
+    zip: '10001',
+    country: 'USA',
+    phone: '+1 (555) 019-2834',
     email: '',
     deliveryInstructions: '',
   },
@@ -57,7 +57,7 @@ export const DEFAULT_LABEL_DATA: LabelData = {
     prefix: 'TRK',
     serviceName: 'EXPRESS AIRWAY',
     trackingUrl: 'https://track.nomadlogistics.com/TRK-LUM-43934-EXPRESS',
-    subBarcodeText: '*LUM-43934-600020*',
+    subBarcodeText: '*LUM-43934-10001*',
     barcodeFormat: 'CODE128',
     barcodeHeight: 52,
     barcodeWidth: 1.8,
@@ -78,7 +78,7 @@ export const DEFAULT_LABEL_DATA: LabelData = {
     deliveryHub: 'DELIVERY HUB: SF-BAY-02',
     statusText: 'READY FOR SCANNERS',
     customNote: '',
-    routingCode: 'HUB-BAY-02/IN-MAA',
+    routingCode: 'HUB-BAY-02/US-NYC',
   },
   customBadges: [
     {
