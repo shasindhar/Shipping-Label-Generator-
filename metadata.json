@@ -1,0 +1,6 @@
+{
+  "name": "Shipping Label Generator",
+  "description": "Professional, fully customizable shipping label generator with live barcode, QR code, batch printing, and multi-template support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
