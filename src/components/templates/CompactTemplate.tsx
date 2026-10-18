@@ -77,15 +77,7 @@ const CompactTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
         </div>
       )}
 
-      {/* Footer */}
-      {visibility.footer && (
-        <div className="flex justify-between items-center pt-1 border-t border-slate-300 text-[8px]">
-          <div className="text-right font-mono font-bold ml-auto">
-            <p className="text-slate-800">{footer.deliveryHub}</p>
-            <p className="text-emerald-700">{footer.statusText}</p>
-          </div>
-        </div>
-      )}
+
     </div>
   );
 };

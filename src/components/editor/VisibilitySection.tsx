@@ -26,7 +26,6 @@ export const VisibilitySection: React.FC<VisibilitySectionProps> = ({ label, onC
     { key: 'recipientSection', label: 'Ship To / Recipient Card', desc: 'Main recipient address card' },
     { key: 'recipientPhone', label: 'Recipient Phone', desc: 'Phone line with icon' },
     { key: 'trackingSection', label: 'Tracking Header Banner', desc: 'Tracking number top bar' },
-    { key: 'deliveryHub', label: 'Delivery Hub Routing', desc: 'SF-BAY-02 / Hub code' },
     { key: 'footer', label: 'Verification Footer', desc: 'Bottom status bar' },
     { key: 'weight', label: 'Package Weight', desc: 'Weight in order section' },
     { key: 'orderDate', label: 'Order Date', desc: 'Timestamp date' },

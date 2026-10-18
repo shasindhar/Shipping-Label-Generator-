@@ -75,10 +75,10 @@ export const DEFAULT_LABEL_DATA: LabelData = {
     paymentStatus: 'Paid',
   },
   footer: {
-    deliveryHub: 'DELIVERY HUB: SF-BAY-02',
-    statusText: 'READY FOR SCANNERS',
+    deliveryHub: '',
+    statusText: '',
     customNote: '',
-    routingCode: 'HUB-BAY-02/US-NYC',
+    routingCode: '',
   },
   customBadges: [
     {
@@ -132,7 +132,7 @@ export const DEFAULT_LABEL_DATA: LabelData = {
     barcode: false,
     subBarcodeText: false,
     qrCode: false,
-    deliveryHub: true,
+    deliveryHub: false,
     footer: true,
     weight: true,
     orderDate: true,

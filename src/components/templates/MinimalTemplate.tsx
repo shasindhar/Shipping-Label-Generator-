@@ -133,12 +133,6 @@ const MinimalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
               <p>{qr.paymentStatus || 'PREPAID'}</p>
             </div>
           </div>
-          <div className="text-right font-mono">
-            {visibility.deliveryHub && (
-              <p className="font-bold text-[10px]">{footer.deliveryHub}</p>
-            )}
-            <p className="font-bold uppercase">{footer.statusText || 'STANDARD'}</p>
-          </div>
         </div>
       )}
     </div>

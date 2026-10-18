@@ -121,10 +121,6 @@ const BoldFreightTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
               <p className="text-[9px] text-slate-600 font-medium">{qr.paymentStatus || 'PREPAID'}</p>
             </div>
           </div>
-          <div className="text-right">
-            <p className="font-black font-mono text-xs text-slate-900">{footer.deliveryHub}</p>
-            <p className="text-[10px] font-bold text-emerald-700 uppercase">{footer.statusText}</p>
-          </div>
         </div>
       )}
     </div>

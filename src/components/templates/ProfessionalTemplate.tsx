@@ -267,28 +267,6 @@ const ProfessionalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
               </span>
             </div>
           </div>
-
-          {/* Right: Delivery Hub & Scanner Status */}
-          <div className="flex flex-col items-end text-right">
-            {visibility.deliveryHub && footer.deliveryHub && (
-              <span className="text-[10px] font-bold font-mono text-slate-900 uppercase tracking-tight">
-                {footer.deliveryHub}
-              </span>
-            )}
-            {footer.statusText && (
-              <span
-                style={{ color: appearance.accentColor || '#15803d' }}
-                className="text-[10px] sm:text-[11px] font-black uppercase tracking-wider"
-              >
-                {footer.statusText}
-              </span>
-            )}
-            {footer.routingCode && (
-              <span className="text-[8px] font-mono text-slate-500 uppercase">
-                {footer.routingCode}
-              </span>
-            )}
-          </div>
         </div>
       )}
     </div>

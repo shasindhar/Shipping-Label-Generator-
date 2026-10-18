@@ -15,12 +15,17 @@ export const loadAutosavedLabel = (): LabelData => {
       if (parsed.company) {
         parsed.company.estDate = '';
       }
+      if (parsed.footer) {
+        parsed.footer.deliveryHub = '';
+        parsed.footer.statusText = '';
+        parsed.footer.routingCode = '';
+      }
       return {
         ...DEFAULT_LABEL_DATA,
         ...parsed,
         company: { ...DEFAULT_LABEL_DATA.company, ...parsed.company },
         appearance: { ...DEFAULT_LABEL_DATA.appearance, ...parsed.appearance },
-        visibility: { ...DEFAULT_LABEL_DATA.visibility, ...parsed.visibility, estDate: false, barcode: false, qrCode: false },
+        visibility: { ...DEFAULT_LABEL_DATA.visibility, ...parsed.visibility, estDate: false, barcode: false, qrCode: false, deliveryHub: false },
       };
     }
   } catch (err) {
