@@ -1,7 +1,5 @@
 import React from 'react';
 import { LabelData } from '../../types';
-import { BarcodeRenderer } from '../BarcodeRenderer';
-import { QrCodeRenderer } from '../QrCodeRenderer';
 
 interface TemplateProps {
   label: LabelData;
@@ -117,26 +115,12 @@ const MinimalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
         </div>
       )}
 
-      {/* Barcode & Tracking */}
+      {/* Tracking */}
       {visibility.trackingSection && (
         <div className="py-2 px-1 border-b-2 border-black flex flex-col items-center justify-center">
-          <span className="font-mono text-xs font-bold uppercase mb-1">
+          <span className="font-mono text-xs font-bold uppercase">
             TRACKING #: {tracking.trackingNumber}
           </span>
-          {visibility.barcode && (
-            <BarcodeRenderer
-              value={tracking.trackingNumber || 'TRK-000000'}
-              format={tracking.barcodeFormat}
-              width={tracking.barcodeWidth || 1.8}
-              height={tracking.barcodeHeight || 48}
-              displayValue={false}
-            />
-          )}
-          {visibility.subBarcodeText && tracking.subBarcodeText && (
-            <span className="font-mono text-[10px] tracking-widest mt-1">
-              {tracking.subBarcodeText}
-            </span>
-          )}
         </div>
       )}
 
@@ -144,9 +128,6 @@ const MinimalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
       {visibility.footer && (
         <div className="pt-2 flex justify-between items-center text-[10px]">
           <div className="flex items-center gap-2">
-            {visibility.qrCode && qr.enabled && (
-              <QrCodeRenderer label={label} size={qr.size ? qr.size - 10 : 48} />
-            )}
             <div className="font-mono text-[9px]">
               <p className="font-bold">{qr.verifiedTitle || 'PARCEL VERIFIED'}</p>
               <p>{qr.paymentStatus || 'PREPAID'}</p>

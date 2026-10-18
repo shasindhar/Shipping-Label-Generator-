@@ -1,7 +1,5 @@
 import React from 'react';
 import { LabelData } from '../../types';
-import { BarcodeRenderer } from '../BarcodeRenderer';
-import { QrCodeRenderer } from '../QrCodeRenderer';
 
 interface TemplateProps {
   label: LabelData;
@@ -72,29 +70,17 @@ const CompactTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
         </div>
       </div>
 
-      {/* Barcode */}
+      {/* Tracking */}
       {visibility.trackingSection && (
         <div className="my-1 flex flex-col items-center justify-center">
           <span className="font-mono text-[9px] font-bold text-slate-700">{tracking.trackingNumber}</span>
-          {visibility.barcode && (
-            <BarcodeRenderer
-              value={tracking.trackingNumber}
-              format={tracking.barcodeFormat}
-              width={1.4}
-              height={38}
-              displayValue={false}
-            />
-          )}
         </div>
       )}
 
-      {/* Footer / QR */}
+      {/* Footer */}
       {visibility.footer && (
         <div className="flex justify-between items-center pt-1 border-t border-slate-300 text-[8px]">
-          {visibility.qrCode && qr.enabled && (
-            <QrCodeRenderer label={label} size={36} />
-          )}
-          <div className="text-right font-mono font-bold">
+          <div className="text-right font-mono font-bold ml-auto">
             <p className="text-slate-800">{footer.deliveryHub}</p>
             <p className="text-emerald-700">{footer.statusText}</p>
           </div>

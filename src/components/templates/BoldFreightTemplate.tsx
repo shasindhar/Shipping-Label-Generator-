@@ -1,7 +1,5 @@
 import React from 'react';
 import { LabelData } from '../../types';
-import { BarcodeRenderer } from '../BarcodeRenderer';
-import { QrCodeRenderer } from '../QrCodeRenderer';
 import { Phone, Plane } from 'lucide-react';
 
 interface TemplateProps {
@@ -105,26 +103,12 @@ const BoldFreightTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
         </div>
       )}
 
-      {/* Barcode Strip */}
+      {/* Tracking Strip */}
       {visibility.trackingSection && (
         <div className="my-1 bg-slate-100 p-2 rounded border border-slate-300 flex flex-col items-center justify-center">
-          <span className="font-mono text-xs font-black tracking-widest text-slate-900 mb-1">
+          <span className="font-mono text-xs font-black tracking-widest text-slate-900">
             {tracking.trackingNumber}
           </span>
-          {visibility.barcode && (
-            <BarcodeRenderer
-              value={tracking.trackingNumber}
-              format={tracking.barcodeFormat}
-              width={1.6}
-              height={46}
-              displayValue={false}
-            />
-          )}
-          {visibility.subBarcodeText && tracking.subBarcodeText && (
-            <span className="font-mono text-[9px] font-bold text-slate-600 mt-1">
-              {tracking.subBarcodeText}
-            </span>
-          )}
         </div>
       )}
 
@@ -132,9 +116,6 @@ const BoldFreightTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
       {visibility.footer && (
         <div className="pt-1.5 border-t-2 border-slate-900 flex justify-between items-center text-[10px]">
           <div className="flex items-center gap-2">
-            {visibility.qrCode && qr.enabled && (
-              <QrCodeRenderer label={label} size={48} />
-            )}
             <div>
               <p className="font-black text-slate-950 uppercase">{qr.verifiedTitle || 'MANIFEST OK'}</p>
               <p className="text-[9px] text-slate-600 font-medium">{qr.paymentStatus || 'PREPAID'}</p>

@@ -1,7 +1,5 @@
 import React from 'react';
 import { LabelData } from '../../types';
-import { BarcodeRenderer } from '../BarcodeRenderer';
-import { QrCodeRenderer } from '../QrCodeRenderer';
 import { Phone } from 'lucide-react';
 
 interface TemplateProps {
@@ -244,47 +242,24 @@ const ProfessionalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
         </div>
       )}
 
-      {/* Tracking Banner & Barcode Section */}
+      {/* Tracking Banner */}
       {visibility.trackingSection && (
         <div className="my-1.5 flex flex-col gap-1">
           {/* Dark Tracking Banner */}
           <div
             style={headerBgStyle}
-            className="w-full py-1 px-2 rounded-t text-center text-xs font-black tracking-wider uppercase font-mono shadow-xs truncate"
+            className="w-full py-1 px-2 rounded text-center text-xs font-black tracking-wider uppercase font-mono shadow-xs truncate"
           >
             TRACKING: {tracking.trackingNumber || 'TRK-LUM-43934-EXPRESS'}
           </div>
-
-          {/* Barcode Frame Box */}
-          {visibility.barcode && (
-            <div className="w-full border border-blue-200/90 rounded-b p-2 bg-white flex flex-col items-center justify-center min-h-[70px]">
-              <BarcodeRenderer
-                value={tracking.trackingNumber || 'TRK-000000'}
-                format={tracking.barcodeFormat}
-                width={tracking.barcodeWidth || 1.8}
-                height={tracking.barcodeHeight || 52}
-                displayValue={tracking.showBarcodeText}
-              />
-              {visibility.subBarcodeText && tracking.subBarcodeText && (
-                <span className="font-mono text-[10px] sm:text-[11px] font-bold tracking-widest text-slate-900 mt-1 text-center">
-                  {tracking.subBarcodeText}
-                </span>
-              )}
-            </div>
-          )}
         </div>
       )}
 
-      {/* Bottom Footer Section: QR Code + Status + Hub */}
+      {/* Bottom Footer Section: Verification Status + Hub */}
       {visibility.footer && (
         <div className="pt-1.5 mt-auto border-t border-slate-300 flex items-center justify-between gap-2">
-          {/* Left: QR Code & Verification Tag */}
+          {/* Left: Verification Tag */}
           <div className="flex items-center gap-2">
-            {visibility.qrCode && qr.enabled && (
-              <div className="p-1 bg-white border border-slate-300 rounded shrink-0">
-                <QrCodeRenderer label={label} size={qr.size || 58} />
-              </div>
-            )}
             <div className="flex flex-col text-[9px] leading-tight font-sans">
               <span className="font-black text-slate-950 uppercase tracking-tight text-[10px]">
                 {qr.verifiedTitle || 'VERIFIED PACKAGE'}
