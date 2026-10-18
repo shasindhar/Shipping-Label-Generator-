@@ -15,8 +15,6 @@ import { LabelPreview, getDimensions } from './components/LabelPreview';
 import { SenderSection } from './components/editor/SenderSection';
 import { RecipientSection } from './components/editor/RecipientSection';
 import { OrderSection } from './components/editor/OrderSection';
-import { TrackingSection } from './components/editor/TrackingSection';
-import { QrSection } from './components/editor/QrSection';
 import { AppearanceSection } from './components/editor/AppearanceSection';
 import { VisibilitySection } from './components/editor/VisibilitySection';
 import { CustomBadgesSection } from './components/editor/CustomBadgesSection';
@@ -32,8 +30,6 @@ import {
   Building2,
   UserCheck,
   Package,
-  Barcode,
-  QrCode,
   Palette,
   Eye,
   Tag,
@@ -49,8 +45,6 @@ type EditorTab =
   | 'sender'
   | 'recipient'
   | 'order'
-  | 'tracking'
-  | 'qr'
   | 'appearance'
   | 'visibility'
   | 'badges';
@@ -146,8 +140,6 @@ export default function App() {
     { id: 'recipient', label: 'Recipient', icon: <UserCheck className="w-4 h-4 text-emerald-400" /> },
     { id: 'sender', label: 'Sender / Company', icon: <Building2 className="w-4 h-4 text-indigo-400" /> },
     { id: 'order', label: 'Order Info', icon: <Package className="w-4 h-4 text-amber-400" /> },
-    { id: 'tracking', label: 'Barcode', icon: <Barcode className="w-4 h-4 text-cyan-400" /> },
-    { id: 'qr', label: 'QR Code', icon: <QrCode className="w-4 h-4 text-purple-400" /> },
     { id: 'appearance', label: 'Appearance & Size', icon: <Palette className="w-4 h-4 text-pink-400" /> },
     { id: 'visibility', label: 'Visible Elements', icon: <Eye className="w-4 h-4 text-teal-400" /> },
     { id: 'badges', label: 'Custom Badges', icon: <Tag className="w-4 h-4 text-amber-500" />, badge: label.customBadges?.length ? `${label.customBadges.length}` : undefined },
@@ -218,12 +210,6 @@ export default function App() {
               )}
               {activeTab === 'order' && (
                 <OrderSection label={label} onChange={handleLabelChange} />
-              )}
-              {activeTab === 'tracking' && (
-                <TrackingSection label={label} onChange={handleLabelChange} />
-              )}
-              {activeTab === 'qr' && (
-                <QrSection label={label} onChange={handleLabelChange} />
               )}
               {activeTab === 'appearance' && (
                 <AppearanceSection label={label} onChange={handleLabelChange} />
