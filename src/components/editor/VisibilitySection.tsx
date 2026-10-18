@@ -21,7 +21,6 @@ export const VisibilitySection: React.FC<VisibilitySectionProps> = ({ label, onC
     { key: 'logo', label: 'Company Logo', desc: 'Brand logo image' },
     { key: 'companySubtitle', label: 'Company Subtitle', desc: 'Service title below company' },
     { key: 'badgeTag', label: 'Priority / P-01 Badge', desc: 'Top right dark tag' },
-    { key: 'estDate', label: 'Estimated Date', desc: 'Estimated delivery text' },
     { key: 'senderSection', label: 'Sender / Ship From', desc: 'Origin hub and address' },
     { key: 'orderSection', label: 'Order Details Column', desc: 'Reference, weight, items' },
     { key: 'recipientSection', label: 'Ship To / Recipient Card', desc: 'Main recipient address card' },

@@ -2,16 +2,16 @@ import { LabelData } from '../types';
 
 export const DEFAULT_LABEL_DATA: LabelData = {
   id: 'default-label-01',
-  name: 'Nomad Express Priority Shipment',
+  name: 'Delulu Store Priority Shipment',
   updatedAt: new Date().toISOString(),
   company: {
-    name: 'NOMAD LOGISTICS',
+    name: 'DELULU STORE',
     subtitle: 'PRIORITY EXPRESS AIRWAY',
     badge: 'P-01',
     logoUrl: '',
     logoSize: 48,
     logoPosition: 'left',
-    estDate: 'EST: Thursday, Aug 13, 2026',
+    estDate: '',
   },
   sender: {
     name: 'NOMAD FULFILLMENT HUB #04',
@@ -122,7 +122,7 @@ export const DEFAULT_LABEL_DATA: LabelData = {
     logo: true,
     companySubtitle: true,
     badgeTag: true,
-    estDate: true,
+    estDate: false,
     senderSection: true,
     orderSection: true,
     recipientSection: true,
@@ -147,13 +147,13 @@ export const createBlankLabel = (): LabelData => ({
   name: 'New Custom Label',
   updatedAt: new Date().toISOString(),
   company: {
-    name: 'YOUR COMPANY NAME',
+    name: 'DELULU STORE',
     subtitle: 'COURIER & FREIGHT SERVICES',
     badge: 'EXP-1',
     logoUrl: '',
     logoSize: 48,
     logoPosition: 'left',
-    estDate: `EST: ${new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}`,
+    estDate: '',
   },
   sender: {
     name: 'SENDER NAME / DISPATCH',

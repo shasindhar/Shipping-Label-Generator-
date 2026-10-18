@@ -60,7 +60,7 @@ const ProfessionalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
             )}
             <div className="flex flex-col min-w-0">
               <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight leading-none uppercase truncate text-slate-900">
-                {company.name || 'NOMAD LOGISTICS'}
+                {company.name || 'DELULU STORE'}
               </h1>
               {visibility.companySubtitle && company.subtitle && (
                 <p className="text-[10px] sm:text-[11px] font-bold tracking-wider text-slate-600 uppercase mt-0.5">
@@ -70,7 +70,7 @@ const ProfessionalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
             </div>
           </div>
 
-          {/* Right Badge & Est Date */}
+          {/* Right Badge */}
           <div className="flex flex-col items-end shrink-0">
             {visibility.badgeTag && company.badge && (
               <div
@@ -79,11 +79,6 @@ const ProfessionalTemplateComponent: React.FC<TemplateProps> = ({ label }) => {
               >
                 {company.badge}
               </div>
-            )}
-            {visibility.estDate && company.estDate && (
-              <span className="text-[9px] font-mono text-slate-600 mt-1 uppercase tracking-tight text-right">
-                {company.estDate}
-              </span>
             )}
           </div>
         </div>

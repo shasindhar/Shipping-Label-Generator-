@@ -1,15 +1,27 @@
 import { LabelData } from '../types';
 import { DEFAULT_LABEL_DATA } from './defaults';
 
-const STORAGE_KEY_AUTOSAVE = 'shipping_label_autosave_v2';
+const STORAGE_KEY_AUTOSAVE = 'shipping_label_autosave_v3';
 const STORAGE_KEY_SAVED_LIST = 'shipping_label_saved_list_v2';
 
 export const loadAutosavedLabel = (): LabelData => {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY_AUTOSAVE);
+    const raw = localStorage.getItem(STORAGE_KEY_AUTOSAVE) || localStorage.getItem('shipping_label_autosave_v2');
     if (raw) {
       const parsed = JSON.parse(raw);
-      return { ...DEFAULT_LABEL_DATA, ...parsed, company: { ...DEFAULT_LABEL_DATA.company, ...parsed.company }, appearance: { ...DEFAULT_LABEL_DATA.appearance, ...parsed.appearance }, visibility: { ...DEFAULT_LABEL_DATA.visibility, ...parsed.visibility } };
+      if (parsed.company?.name === 'NOMAD LOGISTICS') {
+        parsed.company.name = 'DELULU STORE';
+      }
+      if (parsed.company) {
+        parsed.company.estDate = '';
+      }
+      return {
+        ...DEFAULT_LABEL_DATA,
+        ...parsed,
+        company: { ...DEFAULT_LABEL_DATA.company, ...parsed.company },
+        appearance: { ...DEFAULT_LABEL_DATA.appearance, ...parsed.appearance },
+        visibility: { ...DEFAULT_LABEL_DATA.visibility, ...parsed.visibility, estDate: false, barcode: false, qrCode: false },
+      };
     }
   } catch (err) {
     console.error('Failed to load autosaved label:', err);

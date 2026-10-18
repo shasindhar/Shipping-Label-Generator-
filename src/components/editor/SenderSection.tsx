@@ -64,7 +64,7 @@ const SenderSectionComponent: React.FC<SenderSectionProps> = ({ label, onChange 
               type="text"
               value={label.company.name}
               onChange={(e) => handleCompanyChange('name', e.target.value)}
-              placeholder="e.g. NOMAD LOGISTICS"
+              placeholder="e.g. DELULU STORE"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-bold"
             />
           </div>
@@ -88,17 +88,6 @@ const SenderSectionComponent: React.FC<SenderSectionProps> = ({ label, onChange 
               onChange={(e) => handleCompanyChange('badge', e.target.value)}
               placeholder="e.g. P-01 or EXP"
               className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-mono font-bold"
-            />
-          </div>
-
-          <div className="sm:col-span-2">
-            <label className="block text-[11px] font-semibold text-slate-600 mb-1">Estimated Date Label</label>
-            <input
-              type="text"
-              value={label.company.estDate}
-              onChange={(e) => handleCompanyChange('estDate', e.target.value)}
-              placeholder="e.g. EST: Thursday, Aug 13, 2026"
-              className="w-full bg-white border border-slate-200 rounded-md px-2.5 py-1.5 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 font-mono text-[11px]"
             />
           </div>
         </div>

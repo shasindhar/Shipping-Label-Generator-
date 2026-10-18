@@ -87,7 +87,7 @@ export default function App() {
   }, []);
 
   const handleResetDefault = useCallback(() => {
-    if (confirm('Reset label to demo defaults? (Nomad Logistics template data will be restored)')) {
+    if (confirm('Reset label to demo defaults? (DELULU STORE template data will be restored)')) {
       setLabel({ ...DEFAULT_LABEL_DATA, id: `label-${Date.now()}` });
     }
   }, []);
